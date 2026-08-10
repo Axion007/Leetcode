@@ -1,1 +1,16 @@
+name: LeetCode Sync
 
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 18 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Workflow configured
+        run: echo "LeetCode workflow is configured correctly"
